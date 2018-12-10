@@ -107,7 +107,7 @@ int main () {
 
     if (!fork()) { // this is the child process
       close(sockfd); // child doesn't need listener
-      const char* const msg = "Hello world!\n";
+      const char* const msg = "Hello Single threaded world!\n";
       const char* const fmt_header =
         "HTTP/1.1 200 OK\r\n"
         "Content-Type: text/html; charset=utf-8\r\n"

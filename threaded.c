@@ -125,7 +125,7 @@ int main () {
   for (int i = 0; i < NUM_THREADS; ++i) {
     pthread_create(&threads[i], NULL, req_handler, &(struct ThreadData) {
       .sockfd = sockfd,
-      .body = "hello world\n"
+      .body = "<html><head><title>Check</title></head><body><h1>hello world</h1></body></html>\n"
     });
   }
 
